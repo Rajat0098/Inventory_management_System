@@ -124,3 +124,4 @@ Render supports automatic deployments using our pre-configured `render.yaml` Blu
    - A FastAPI Web Service (**Backend API Hosted URL**)
    - A Static Web Service (**Frontend Hosted URL**)
 5. Note down the deployed URLs provided by Render!
+6. Automated builds and pushes to Docker Hub are managed by GitHub Actions CI/CD.
