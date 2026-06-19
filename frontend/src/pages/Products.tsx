@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Plus, Search, Edit2, Trash2, X } from 'lucide-react';
 
 interface Product {
@@ -214,10 +214,10 @@ export default function Products({ apiBase, showToast }: ProductsProps) {
                         </button>
                         <button
                           className="btn btn-secondary btn-sm"
-                          style={{ hover: { background: 'var(--danger-glow)' } }}
                           title="Delete Product"
                           onClick={() => handleDelete(prod.id, prod.name)}
                         >
+
                           <Trash2 size={12} style={{ color: 'var(--danger)' }} />
                         </button>
                       </div>

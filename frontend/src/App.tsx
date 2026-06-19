@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { LayoutDashboard, Package, Users, ShoppingCart, Activity, ShieldCheck } from 'lucide-react';
 import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Plus, Search, Eye, X, Trash, CornerDownRight, CheckCircle2, AlertTriangle, RefreshCw } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Plus, Search, Eye, X, Trash, CornerDownRight, AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Product {
   id: number;
@@ -13,7 +13,9 @@ interface Customer {
   id: number;
   name: string;
   email: string;
+  phone?: string;
 }
+
 
 interface OrderItem {
   id: number;

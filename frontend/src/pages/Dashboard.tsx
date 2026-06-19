@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Package, Users, ShoppingCart, DollarSign, AlertTriangle, ArrowRight, PlusCircle } from 'lucide-react';
 
 interface Product {

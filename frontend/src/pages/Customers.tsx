@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Plus, Search, Edit2, Trash2, X } from 'lucide-react';
 
 interface Customer {
