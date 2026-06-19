@@ -1,5 +1,7 @@
 # StockWise - Inventory & Order Management System
 
+[![Publish Docker Image](https://github.com/Rajat0098/Inventory_management_System/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/Rajat0098/Inventory_management_System/actions/workflows/docker-publish.yml)
+
 StockWise is a simplified Inventory & Order Management System built with a **FastAPI** backend API, a **React** (Vite + TypeScript + Vanilla CSS) frontend, and a **PostgreSQL** database. 
 
 The application implements advanced inventory control rules, database row locking for race-condition prevention, responsive dashboard views, and full containerization.
