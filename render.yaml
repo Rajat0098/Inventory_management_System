@@ -1,0 +1,39 @@
+# Render Blueprint Specification
+# To deploy: Push your repo to GitHub, go to dashboard.render.com, click "New" -> "Blueprint", and connect this repo.
+services:
+  # 1. PostgreSQL Database Service (Free Tier)
+  - type: db
+    name: stockwise-db
+    databaseName: inventory_db
+    user: postgres
+    plan: free
+
+  # 2. FastAPI Backend Service (Free Web Service)
+  - type: web
+    name: stockwise-backend
+    env: python
+    repo: https://github.com/your-username/inventory-order-system # Place your repo here
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: stockwise-db
+          property: connectionString
+      - key: BACKEND_PORT
+        value: 8000
+    plan: free
+
+  # 3. React Frontend Service (Free Static Site)
+  - type: web
+    name: stockwise-frontend
+    env: static
+    repo: https://github.com/your-username/inventory-order-system # Place your repo here
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    publishDir: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://stockwise-backend.onrender.com # Update this to your deployed backend URL on Render
+    plan: free
