@@ -12,7 +12,7 @@ services:
   - type: web
     name: stockwise-backend
     env: python
-    repo: https://github.com/your-username/inventory-order-system # Place your repo here
+    repo: https://github.com/Rajat0098/Inventory_management_System
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port 8000
@@ -29,7 +29,7 @@ services:
   - type: web
     name: stockwise-frontend
     env: static
-    repo: https://github.com/your-username/inventory-order-system # Place your repo here
+    repo: https://github.com/Rajat0098/Inventory_management_System
     rootDir: frontend
     buildCommand: npm install && npm run build
     publishDir: dist
