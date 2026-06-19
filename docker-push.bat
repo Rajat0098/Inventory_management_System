@@ -10,7 +10,7 @@ pause
 
 echo.
 echo [1/3] Building backend Docker image...
-docker build -t rajat0070/stockwise-backend:latest ./backend
+docker build -t pri0070/stockwise-backend:latest ./backend
 if %errorlevel% neq 0 (
     echo Error during build. Please make sure Docker Desktop is running.
     pause
@@ -23,7 +23,7 @@ docker login
 echo.
 
 echo [3/3] Pushing image to Docker Hub...
-docker push rajat0070/stockwise-backend:latest
+docker push pri0070/stockwise-backend:latest
 if %errorlevel% neq 0 (
     echo Error during push.
     pause
@@ -33,6 +33,7 @@ echo.
 
 echo ===================================================
 echo   Successfully pushed to Docker Hub!
-echo   Link: https://hub.docker.com/r/rajat0070/stockwise-backend
+echo   Link: https://hub.docker.com/r/pri0070/stockwise-backend
 echo ===================================================
+
 pause
